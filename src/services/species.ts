@@ -1,0 +1,2 @@
+export const getSpecies = (): any => {
+}
