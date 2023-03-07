@@ -1,4 +1,4 @@
-import { getSpeciesResource } from '../adapters/xhr/axios';
+import { getResource, getSpeciesResource } from '../adapters/xhr/axios';
 import { SPECIES } from '../helpers/constants/swapiEndpoints';
 import { ISpecie } from '../helpers/interfaces/ISpecie';
 
@@ -17,6 +17,25 @@ export const getSpecies = async (...specieNames: Array<string>) => {
     } catch (error) {
         console.log(error);
     }
-    console.log(response);
     return response;
+};
+
+export const getUser = async (url: string) => {
+    if (!url) {
+        return;
+    }
+
+    try {
+        return await getResource(url);
+    } catch (error) {}
+};
+
+export const getVehicles = async (url: string) => {
+    if (!url) {
+        return;
+    }
+
+    try {
+        return await getResource(url);
+    } catch (error) {}
 };

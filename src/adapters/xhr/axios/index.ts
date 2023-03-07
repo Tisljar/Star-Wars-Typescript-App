@@ -26,3 +26,7 @@ export const getSpeciesResource = async (url: string) => {
     }
     return species;
 };
+
+export const getResource = (url: string) => {
+    return getAxiosInstance().get(url);
+};
