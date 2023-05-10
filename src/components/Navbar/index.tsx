@@ -6,7 +6,18 @@ const Navbar = (props: any) => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container">
-                <a className="navbar-brand">IMG + {username}</a>
+                <a className="navbar-brand">
+                    {specieName && (
+                        <img
+                            src={require('../../assets/img/' + specieName.toLowerCase() + '.jpeg')}
+                            alt=""
+                            width={30}
+                            height={30}
+                            className="d-inline-block align-top me-2"
+                        />
+                    )}
+                    {username}
+                </a>
 
                 <div className="collapse navbar-collapse">
                     <ul className="navbar-nav me-auto">
@@ -21,6 +32,11 @@ const Navbar = (props: any) => {
                                 </li>
                             );
                         })}
+                    </ul>
+                    <ul className="navbar-nav">
+                        <Link to={'/'} className="nav-link">
+                            Logout
+                        </Link>
                     </ul>
                 </div>
             </div>

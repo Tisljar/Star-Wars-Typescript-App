@@ -1,3 +1,5 @@
+import './index.scss';
+
 const Card = ({ specie }: any) => {
     return (
         <div className="card">
@@ -18,11 +20,11 @@ const Card = ({ specie }: any) => {
                     {specie.classification}
                 </li>
                 <li className="list-group-item">
-                    <b>Designation: </b>
+                    <b>Designation:</b>
                     {specie.designation}
                 </li>
                 <li className="list-group-item">
-                    <b>Language: </b>
+                    <b>Language:</b>
                     {specie.language}
                 </li>
             </ul>
